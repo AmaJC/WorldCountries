@@ -1,12 +1,17 @@
 var questions = [
     {
-        "Question?": [
-            "Answer",
+        "What is the capital of the Philippines?": [
+            "Manila",
         ]
     },
     {
-        "Question2?": [
-            "Answer",
+        "In what country can you find the capital city of Manila?": [
+            "Philippines",
+        ]
+    },
+    {
+        "What is the capital of the United States?": [
+            "Washington D.C.",
         ]
     }
 ];
@@ -259,7 +264,7 @@ function handleRepeatRequest(intent, session, callback) {
 function handleGetHelpRequest(intent, session, callback) {
     // Provide a help prompt for the user, explaining how the game is played. Then, continue the game
     // if there is one in progress, or provide the option to start another one.
-    
+
     // Ensure that session.attributes has been initialized
     if (!session.attributes) {
         session.attributes = {};
@@ -270,7 +275,7 @@ function handleGetHelpRequest(intent, session, callback) {
 
     // Do not edit the help dialogue. This has been created by the Alexa team to demonstrate best practices.
 
-    var speechOutput = "I will ask you " + GAME_LENGTH + " geography related questions. Respond with your best guess. " 
+    var speechOutput = "I will ask you " + GAME_LENGTH + " geography related questions. Respond with your best guess. "
         + "To start a new game at any time, say, start game. "
         + "To repeat the last question, say, repeat. "
         + "Would you like to keep playing?",
